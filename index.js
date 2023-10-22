@@ -1,4 +1,3 @@
-console.log(currentDomain);
 const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyBmgIRJw0Gh3ihy_hE2D9WpY3Xx5VbrmNU",
   authDomain: "movies-api-52dec.firebaseapp.com",
