@@ -7,13 +7,15 @@ const firebaseApp = firebase.initializeApp({
   appId: "1:552233901863:web:680360d57cf0d2df069302",
   measurementId: "G-W40J023F1Y",
 });
+
 const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
-console.log(`sss`);
-const login = () => {
-  const email = document.getElementsByClassName("email-input").value;
 
-  const password = document.getElementsByClassName("password-input").value;
+console.log(`sss`);
+
+const login = () => {
+  const email = document.querySelector(".email-input").value; // Use querySelector instead of getElementsByClassName
+  const password = document.querySelector(".password-input").value; // Use querySelector instead of getElementsByClassName
 
   auth
     .signInWithEmailAndPassword(email, password)
@@ -25,7 +27,7 @@ const login = () => {
     });
 };
 
-const btn = document.getElementsByClassName("form-btn");
+const btn = document.querySelector(".form-btn"); // Use querySelector instead of getElementsByClassName
 
 btn.addEventListener("click", () => {
   console.log(`inside`);
