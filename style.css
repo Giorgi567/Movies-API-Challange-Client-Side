@@ -1,0 +1,14 @@
+.Main {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-btn {
+  width: 250px;
+  height: 50px;
+  font-size: 2rem;
+  background-color: black;
+  color: white;
+}
