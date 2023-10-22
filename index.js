@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const firebaseApp = firebase.initializeApp({
-    apiKey: "AIzaSyBmgIRJw0G1h3ihy_hE2D9WpY3Xx5VbrmNU",
+    apiKey: "AIzaSyBmgIRJw0Gh3ihy_hE2d9WpY3Xx5VbrmNU",
     authDomain: "movies-api-52dec.firebaseapp.com",
     projectId: "movies-api-52dec",
     storageBucket: "movies-api-52dec.appspot.com",
