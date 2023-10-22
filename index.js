@@ -10,7 +10,7 @@ const firebaseApp = firebase.initializeApp({
 });
 const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
-
+console.log(`sss`);
 const login = () => {
   const email = document.getElementsByClassName("email-input").value;
 
