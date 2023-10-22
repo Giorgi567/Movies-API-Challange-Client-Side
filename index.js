@@ -24,3 +24,10 @@ const login = () => {
       console.log(err.message);
     });
 };
+
+const btn = document.getElementsByClassName("form-btn");
+
+btn.addEventListener("click", () => {
+  console.log(`inside`);
+  login();
+});
