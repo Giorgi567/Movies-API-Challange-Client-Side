@@ -21,9 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
     auth
       .signInWithEmailAndPassword(email, password)
       .then((res) => {
-        console.log(res);
+        console.log(res.user);
       })
       .catch((err) => {
+        alert(err.message);
         console.log(err.message);
       });
   };
