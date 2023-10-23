@@ -8,11 +8,11 @@ const firebaseApp = firebase.initializeApp({
   measurementId: "G-W40J023F1Y",
 });
 document.addEventListener("DOMContentLoaded", function () {
-  const db = firebaseApp.firestore();
   const auth = firebaseApp.auth();
   const emailInput = document.querySelector(".email-input");
   const passwordInput = document.querySelector(".password-input");
   const loginButton = document.querySelector(".form-btn");
+  const resetPasswordButton = document.querySelector(".reset-password-btn");
 
   const login = () => {
     const email = emailInput.value;
@@ -29,8 +29,26 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   };
 
+  const forgotPassword = async () => {
+    const email = resetPasswordButton.value;
+
+    auth
+      .sendPasswordResetEmail(email)
+      .then(() => {
+        alert("Password reset email sent. Please check your inbox.");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+
   loginButton.addEventListener("click", () => {
     console.log("Inside click event");
     login();
+  });
+
+  resetPasswordButton.addEventListener("click", () => {
+    console.log(`Inside of a Reset`);
+    forgotPassword();
   });
 });
