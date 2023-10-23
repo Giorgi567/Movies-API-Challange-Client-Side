@@ -10,10 +10,13 @@ const firebaseApp = firebase.initializeApp({
 document.addEventListener("DOMContentLoaded", function () {
   const db = firebaseApp.firestore();
   const auth = firebaseApp.auth();
+  const emailInput = document.querySelector(".email-input");
+  const passwordInput = document.querySelector(".password-input");
+  const loginButton = document.querySelector(".form-btn");
 
   const login = () => {
-    const email = document.querySelector(".email-input").value;
-    const password = document.querySelector(".password-input").value;
+    const email = emailInput.value;
+    const password = passwordInput.value;
 
     auth
       .signInWithEmailAndPassword(email, password)
@@ -25,10 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   };
 
-  const btn = document.querySelector(".form-btn");
-
-  btn.addEventListener("click", () => {
-    console.log(`inside`);
+  loginButton.addEventListener("click", () => {
+    console.log("Inside click event");
     login();
   });
 });
