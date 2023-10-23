@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const passwordInput = document.querySelector(".password-input");
   const loginButton = document.querySelector(".form-btn");
   const resetPasswordButton = document.querySelector(".reset-password-btn");
-  const resetPasswordinput = document.querySelector(".orgot-email-input");
+  const resetPasswordinput = document.querySelector(".forgot-email-input");
 
   const login = () => {
     const email = emailInput.value;
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const forgotPassword = async () => {
     const email = resetPasswordinput.value;
-
+    console.log(email);
     auth
       .sendPasswordResetEmail(email)
       .then(() => {
